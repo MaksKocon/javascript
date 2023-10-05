@@ -1,0 +1,24 @@
+<textarea cols="x" rows="y" readonly>
+<html>
+<body>
+<div style="color:green;font-size:46px;">
+<script language="JavaScript">
+var D1_koc=prompt("D1=","");
+var D2_koc=prompt("D2=","");
+var a=parseFloat(D1_koc);
+var b=parseFloat(D2_koc);
+var iloczyn;
+iloczyn=a-b;
+var wynik;
+var sekundy;
+sekundy=86400;
+wynik=iloczyn*sekundy;
+
+document.write ("D1="+a+"<br>");
+document.write ("D2="+b+"<br>");
+document.write ("wynik="+wynik+"sekund<br>");
+</script>
+</div>
+</body>
+</html>
+</textarea>
