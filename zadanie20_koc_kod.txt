@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function AB_koc()
+{
+var xa_koc= parseFloat(document.getElementById('dlugosc1').value);
+var ya_koc= parseFloat(document.getElementById('dlugosc2').value);
+var xb_koc= parseFloat(document.getElementById('dlugosc3').value);
+var yb_koc= parseFloat(document.getElementById('dlugosc4').value);
+var wynik_ab= Math.sqrt(Math.pow(xa_koc-xb_koc,2)+Math.pow(ya_koc-yb_koc,2))
+document.getElementById("nazwa").innerHTML ="Długość AB= "+wynik_ab.toFixed(2)+" cm";
+}
+
+function BC_koc()
+{
+var xb_koc= parseFloat(document.getElementById('dlugosc3').value);
+var yb_koc= parseFloat(document.getElementById('dlugosc4').value);
+var xc_koc= parseFloat(document.getElementById('dlugosc5').value);
+var yc_koc= parseFloat(document.getElementById('dlugosc6').value);
+var wynik_bc= Math.sqrt(Math.pow(xb_koc-xc_koc,2)+Math.pow(yb_koc-yc_koc,2))
+document.getElementById("nazwa").innerHTML ="Długość BC= "+wynik_bc.toFixed(2)+" cm";
+}
+
+function AC_koc()
+{
+var xa_koc= parseFloat(document.getElementById('dlugosc1').value);
+var ya_koc= parseFloat(document.getElementById('dlugosc2').value);
+var xc_koc= parseFloat(document.getElementById('dlugosc5').value);
+var yc_koc= parseFloat(document.getElementById('dlugosc6').value);
+var wynik_ac= Math.sqrt(Math.pow(xa_koc-xc_koc,2)+Math.pow(ya_koc-yc_koc,2))
+document.getElementById("nazwa").innerHTML ="Długość AC= "+wynik_ac.toFixed(2)+" cm";
+}
+</script>
+
+<h1>Podaj trzy współżędne nie współliniowe:</h1><br><br>
+Podaj współżędną x dla A : <input type="text" id="dlugosc1" value="x"> cm<br>
+Podaj współżędną y dla A : <input type="text" id="dlugosc2" value="y"> cm<br><br>
+
+Podaj współżędną x dla B : <input type="text" id="dlugosc3" value="x"> cm<br>
+Podaj współżędną y dla B : <input type="text" id="dlugosc4" value="y"> cm<br><br>
+
+Podaj współżędną x dla C : <input type="text" id="dlugosc5" value="x"> cm<br>
+Podaj współżędną y dla C : <input type="text" id="dlugosc6" value="y"> cm<br><br>
+
+<input type="button" name="AB" value="Oblicz AB" Onclick="AB_koc()"><br>
+<input type="button" name="BC" value="Oblicz BC" Onclick="BC_koc()"><br>
+<input type="button" name="AC" value="Oblicz AC" Onclick="AC_koc()"><br><br>
+
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>

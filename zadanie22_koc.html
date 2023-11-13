@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+function pole_kocon()
+{
+var a_koc= parseFloat(document.getElementById('a_dana_koc').value);
+var b_koc= parseFloat(document.getElementById('b_dana_koc').value);
+var pole=a_koc*b_koc;
+
+document.getElementsByName('pole')[0].value=pole.toFixed(2);
+document.getElementById("wprowadz_pole_koc").innerHTML ="Pole= "+pole.toFixed(2)+" cm^2";
+}
+
+function obwod_kocon()
+{
+var a_koc= parseFloat(document.getElementById('a_dana_koc').value);
+var b_koc= parseFloat(document.getElementById('b_dana_koc').value);;
+var obwod= (a_koc*2)+(b_koc*2);
+
+document.getElementsByName('obw')[0].value=obwod.toFixed(2);
+document.getElementById("wprowadz_obwod_koc").innerHTML ="Obwód= "+obwod.toFixed(2)+" cm";
+}
+</script>
+
+<h1>pole i obwód</h1><br><br>
+Podaj długość boku a: <input type="text" id="a_dana_koc" value="podaj a"> cm<br><br>
+Podaj długość boku b: <input type="text" id="b_dana_koc" value="podaj b"> cm<br><br><br>
+
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole_kocon()"><br><br>
+<input type="button" name="obw" value="Oblicz obwod" Onclick="obwod_kocon()"><br><br><br>
+
+
+<table>
+<tr id="wprowadz_pole_koc"></tr>
+<tr id="wprowadz_obwod_koc"></tr>
+</table>
+</body>
+</html>
