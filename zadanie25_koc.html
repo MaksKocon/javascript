@@ -1,0 +1,38 @@
+<html>
+<head>
+<body>
+
+<div style="color: blue; font-size: 50px;">
+
+<script>
+  var n_koc = parseFloat(prompt("N0= ","sztuki"));
+  var t_koc = parseFloat(prompt("T= ","lata"));
+  var t1t2_koc = parseFloat(prompt("T1/2=","lata"));
+
+  function Lambda(t1t2_koc)
+ {
+
+  return (Math.log(2))/t1t2_koc;
+ }
+
+ function euler(t_koc,n_koc)
+ {
+	potega = t*-Lambda(t1t2_koc);
+	e = Math.pow(Math.E,potega);
+  return n * e;
+ }
+
+document.write("N0 = "+ n_koc +" (sztuk) <br>")
+
+document.write("t = "+ t_koc+" (lat) <br>")
+
+document.write("T1/T2 = "+ t1t2_koc +" (lat) <br>");
+
+document.write("Lambda = "+ Lambda(t1t2_koc).toFixed(7)+" (1/rok) <br>");
+
+document.write("N = "+euler(t_koc,n_koc).toFixed(7)+" (sztuk) ");
+
+</script>
+</div>
+</body>
+</html>
