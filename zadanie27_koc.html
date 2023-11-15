@@ -1,0 +1,56 @@
+<html>
+<head>
+<script language="JavaScript">
+  
+function Alfa(x_koc,s_koc)
+{
+x_kus=parseFloat(x_koc)
+s_kus=parseFloat(s_koc)
+
+Alfa_koc = x_koc/s_koc;
+
+document.getElementsByName('alfa_koc')[0].value=Alfa_koc.toFixed(2);  
+}
+
+function O(x_koc,s_koc)
+{
+x_koc=parseFloat(x_koc)
+s_koc=parseFloat(s_koc)
+
+h = Math.pow(s_koc,2)-Math.pow(x_koc,2);
+
+wysokosc_wynik_koc = Math.sqrt(h);
+
+document.getElementsByName('wys_koc')[0].value=wysokosc_wynik_koc.toFixed(2);;
+}
+
+</script>
+</head>
+<body>
+<center>
+
+<br> <br>
+
+<form name="formularz" action="..." onsubmit="Alfa(this.odleglosc.value,this.droga.value); O(this.odleglosc.value,this.droga.value);return false">
+
+Podaj odleglosc =
+<input size="6" name="odleglosc">
+
+Podaj droge =
+<input size="6" name="droga">
+
+<br> <br>
+
+<input TYPE="submit" Value="oblicz" >
+
+<br> <br>
+
+Wysokosc =
+<input size="6" name="wys_koc">
+
+Alfa =
+<input size="6" name="alfa_koc">
+</form>
+</center>
+</body>
+</html>
