@@ -1,0 +1,41 @@
+<html lang="pl-PL">
+<head>
+<script language="JavaScript">
+function Drabina(d,x)
+{
+ var d_koc=parseFloat(d)
+ var x_koc=parseFloat(x)
+ var Drabina=Math.sqrt(d_koc*d_koc+x_koc*x_koc);
+document.getElementsByName('drabina_koc')[0].value= Drabina.toFixed(2);
+}
+function Alfa(d,x)
+{
+ var d_koc=parseFloat(d)
+ var x_koc=parseFloat(x)
+ var Alfa=(Math.atan(d_koc/x_koc)*180/Math.PI);
+document.getElementsByName('alfa_koc')[0].value= Alfa.toFixed(2);
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+<p>Obliczanie odległości od drabiny i kąta</p>
+<form name="formularz" onsubmit="Drabina(this.d.value, this.x.value); Alfa(this.d.value, this.x.value); return false">
+Podaj d=
+<input size="6" name="d">
+Podaj x=
+<input size="6" name="x">
+<br> <br>
+<input type="submit" Value="oblicz" >
+<br> <br>
+Drabina=
+<input size="6" name="drabina_koc">
+Alfa=
+<input size="6" name="alfa_koc">
+<table>
+<tr id="dlugosc_koc"></tr>
+<tr id="kat_koc"></tr>
+</table>
+</form>
+</body>
+</html>
