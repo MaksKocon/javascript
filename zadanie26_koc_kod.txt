@@ -1,0 +1,62 @@
+<html>
+<head>
+<script language="JavaScript">
+
+function P(b_koc,a_koc,h_koc)
+{
+a_koc=parseFloat(a_koc)
+b_koc=parseFloat(b_koc)
+h_koc=parseFloat(h_koc)
+
+Pole_kocon = (Math.abs((a_koc+b_koc))*h_koc)/2
+
+document.getElementsByName('Pole')[0].value=Pole_kocon.toFixed(2);
+}
+
+function O(b_koc,a_koc,h_koc)
+{
+a_koc=parseFloat(a_koc)
+b_koc=parseFloat(b_koc)
+h_koc=parseFloat(h_koc)
+x_koc = (Math.abs(a_koc - b_koc))/2;
+
+bok1_koc = Math.pow(x_koc,2)+Math.pow(h_koc,2);
+bok1_1 = Math.sqrt(bok1_koc);
+
+obwod_kocon = a_koc+b_koc+ 2*bok1_1;
+
+document.getElementsByName('Obwod')[0].value=obwod_kocon.toFixed(2);;
+}
+</script>
+</head>
+<body>
+<center> 
+<br> <br>
+
+<form name="formularz" action="..." onsubmit="P(this.a.value,this.b.value,this.h.value); O(this.a.value,this.b.value,this.h.value);return false">
+
+Podaj a=
+<input size="6" name="a">
+
+Podaj b=
+<input size="6" name="b">
+
+Podaj h=
+<input size="6" name="h">
+
+<br> <br>
+
+<input TYPE="submit" Value="oblicz" >
+
+<br> <br>
+
+Obwod =
+<input size="6" name="Obwod">
+
+Pole =
+<input size="6" name="Pole">
+
+</form>
+</center>
+</body>
+</html>
