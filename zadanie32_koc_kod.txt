@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript">
+function wiezowiec(pientra_k,mieszkania_k,informacje_k,rok_k)//początek konstruktora
+{
+this.pientra=pientra_k;
+this.mieszkania=mieszkania_k;
+this.informacje=informacje_k;
+this.rok=rok_k;
+}//koniec konstruktora
+wiezowiec.prototype.wypisz = function () //definicja metody
+{
+alert(this.pientra + ' ' + this.mieszkania+ ' ' + this.informacje + ' ' + this.rok);
+};
+var wiezowiec1 = new wiezowiec("10 bez piwnicy", "90", "schody i winda", "2015r"); // nowy obiekt
+var wiezowiec2 = new wiezowiec('5 z piwnica', '40', 'tylko schody', '2005r');
+var wiezowiec3 = new wiezowiec('10 z piwnica', '95', 'schody i winda', '2020r');
+wiezowiec1.wypisz(); // uruchomienie metody wypisz() 
+wiezowiec2.wypisz();
+document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól osoby1
+document.write("wiezowiec3"+" "+wiezowiec3.pientra+" "+wiezowiec3.mieszkania+" "+wiezowiec3.informacje+" "+wiezowiec3.rok);
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
