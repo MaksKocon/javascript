@@ -1,0 +1,53 @@
+<html>
+<body>
+<div style="color:green; font-size:2cm;">
+<script language="JavaScript">
+function oblicz_kocon(){
+  var a_koc=parseFloat(document.getElementById('a').value);
+  var b_koc=parseFloat(document.getElementById('b').value);
+  var c_koc=parseFloat(document.getElementById('c').value);
+
+  if(a_koc==0){
+  document.getElementById("blad").innerHTML ="to nie jest funkcja kwadratowa";
+  }
+  
+  var delta_koc = Math.pow(b_koc,2)-(4*a_koc*c_koc);
+  
+  var p_koc = (-b_koc)/(2*a_koc);
+  var q_koc = (-delta_koc)/(4*a_koc);
+  
+  document.getElementById("wierzcholek").innerHTML ="wierzcholek tej funkcji ma współrzędne p="+p_koc+" q="+q_koc;
+  
+  document.getElementById("k").innerHTML ="f(x)="+a_koc;
+  
+  if(p_koc<0){
+  var p_minus_koc=p_koc*(-1);
+  document.getElementById("ka").innerHTML ="(x+"+p_minus_koc+")^2";
+  }
+  else{
+  document.getElementById("ka").innerHTML ="(x-"+p_koc+")^2";
+  }
+  
+
+  
+
+  
+  }
+  
+</script>
+Podaj a: <input type="text" id="a"><br>
+Podaj b: <input type="text" id="b"><br>
+Podaj c: <input type="text" id="c"><br><br>
+
+<input type="button" name="oblicz" value="oblicz" Onclick="oblicz_kocon()"><br><br>
+
+<div style="color:green;font-size:2cm;"id="blad"></div><br>
+
+<div style="color:green;font-size:2cm;"id="wierzcholek"></div><br>
+
+<table style="color:green;font-size:2cm;">
+<tr><td id="k"></td><td id="ka"></td></tr>
+</table>
+</div>
+</body>
+</html>
