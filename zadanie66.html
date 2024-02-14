@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    #grafiki img {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div id="grafiki">
+  <img src="obraz1.jpg" >
+  <img src="obraz2.jpg" >
+  <img src="obraz3.jpg" >
+</div>
+<script>
+ let tab = ["obraz1.jpg", "obraz2.jpg", "obraz3.jpg"];
+ let index = 0;
+ let images = document.querySelectorAll('#grafiki img');
+
+  function nowy() {
+
+    for (let i = 0; i < tab.length; i++) {
+      images[i].style.display = 'none';
+    }
+    images[index].style.display = 'block';
+    index = (index + 1) % tab.length;
+  }
+
+ setInterval(nowy, 2000);
+</script>
+</body>
+</html>

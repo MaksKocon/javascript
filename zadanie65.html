@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+ 
+function porownaj(a,b)
+{
+if (a>0)
+return null
+else
+return a - b
+}
+
+var Tablica = new Array('a', 8, 2, 'd', 'b', 3);
+document.write('Bez sortowania: <br>' + Tablica.join() );
+document.write('<br>Sortowanie: <br>');
+Tablica.sort()
+document.write(Tablica.join());
+
+ </script>
+</body>
+</html>

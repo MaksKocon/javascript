@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie2</title>
+</head>
+<body>
+ <script>
+ var TaB_koc = new Array('Polska', 'Niemcy', 'Włochy', 'Wielka Brytania', 'USA', 'Norwegia', 'Meksyk');
+
+ for (i = 0; i<TaB_koc.length; i++)
+ {
+ document.write(TaB_koc[i] + "<br>");
+ }
+ 
+ document.write("<br><b>Po dołączeniu elemntu</b><br>");
+ TaB_koc.push('Austria');
+ for (i = 0; i<TaB_koc.length; i++)
+ {
+ document.write(TaB_koc[i] + "<br>");
+ }
+ 
+ document.write("<br><b>Po usunięciu pierwszego elementu</b><br>");
+ TaB_koc.shift();
+ for (i = 0; i<TaB_koc.length; i++)
+ {
+ document.write(TaB_koc[i] + "<br>");
+ }
+ 
+ document.write("<br><b>Po odwróceniu</b><br>");
+ TaB_koc.reverse();
+ for (i = 0; i<TaB_koc.length; i++)
+ {
+ document.write(TaB_koc[i] + "<br>");
+ }
+ 
+ </script>
+</body>
+</html>

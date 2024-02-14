@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie1</title>
+</head>
+<body>
+ <script>
+ var koniec=prompt("koniec=","");
+ var liczba=0;
+ var ilo_koc=1;
+ var TT_koc = new Array()
+ for (i = 0; i <= koniec; i++) {
+ liczba=liczba+3;
+ TT_koc[i] = liczba;
+ ilo_koc=ilo_koc*liczba;
+ document.write("T["+i+"]="+TT_koc[i]+"<br>");
+ }
+ document.write("iloczyn="+ilo_koc+"<br>");
+ </script>
+</body>
+</html>
